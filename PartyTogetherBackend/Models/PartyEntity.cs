@@ -19,5 +19,7 @@ namespace PartyTogetherBackend.Models
         public string Phone { set; get; }
         public string Date { set; get; }
 
+        public Boolean Will_Attend { set; get; }
+
     }
 }

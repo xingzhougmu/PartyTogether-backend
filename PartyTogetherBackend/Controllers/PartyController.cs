@@ -27,7 +27,7 @@ namespace PartyTogetherBackend.Controllers
         }
 
         // POST: api/Party
-        public void Post(PartyEntity party)
+        public string Post(PartyEntity party)
         {
             try
             {
@@ -67,10 +67,12 @@ namespace PartyTogetherBackend.Controllers
 
                 // Execute the insert operation.
                 table.Execute(insertOperation);
+
+                return "created";
             }
             catch (StorageException se)
             {
-
+                return "failed";
             }
 
         }
